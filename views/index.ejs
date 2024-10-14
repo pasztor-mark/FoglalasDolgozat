@@ -18,22 +18,22 @@
           <p class="card-text">Gyors adatmegerősítés, hogy lefoglalja a helyét.</p>
           <hr>
           <form method="post" class="d-flex flex-column ">
-              <label for="nev" value="<%- nev %>">Név</label>
-              <input type="text" placeholder="Teszt János" name="nev" >
-              <label for="email"  >E-mail</label>
-              <input type="email"value="<%- email %>" placeholder="teszt@janos.hu" name="email" >
+              <label>Név</label>
+              <input required value="<%= nev %>" type="text" placeholder="Teszt János" name="nev" >
+              <label  >E-mail</label>
+              <input required type="email" value="<%- email %>" placeholder="teszt@janos.hu" name="email" >
             
             <hr>
             
-              <label for="datum">Dátum</label>
-              <input  type="datetime-local" value="<%- datum %> name="datum">
-              <label for="letszam">Létszám</label>
-              <input  type="number" min="1" max="10" value="<%- number %> name="letszam">
+              <label>Dátum</label>
+              <input required type="datetime-local" value="<%- datum %>" name="datum">
+              <label>Létszám</label>
+              <input required type="number" min="1" max="10" value="<%- letszam %>" name="letszam">
               <hr>
               <button type="submit">Foglalás</button>
           </form>
         </div>
-        <div class="alert alert-danger m-0 p-0" role="alert">
+        <div class="alert alert-danger m-0 p-0 border-0" role="alert">
           <%- errors %>
         </div>
       </div>
